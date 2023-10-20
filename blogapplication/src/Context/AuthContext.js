@@ -34,8 +34,8 @@ const AuthProvider = ({ children }) => {
             if (token) {
 
               try {
-                // const response = await axios.post("/http:localhost:8000/get-currentUser", { token });
-                const response = await api.post("/get-currentUser", { token });
+                const response = await axios.post("/http:localhost:8000/get-currentUser", { token });
+                // const response = await api.post("/get-currentUser", { token });
                 if (response.data.success) {
                     dispatch({
                         type: "LOGIN",

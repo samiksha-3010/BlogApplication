@@ -73,8 +73,7 @@ export const Register = async (req, res) => {
           role: user.role
         };
           // console.log("Before ")
-        //   const expirytime = user?.role == "Seller" ? "4h" : "1h";
-          // console.log(expirytime, "expirytime")
+        
         const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
         // console.log(token, "token her");
         return res.json({
