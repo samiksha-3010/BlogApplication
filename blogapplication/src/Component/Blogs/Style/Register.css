@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.border{
+border: 1px solid black;
+align-items: center;
+display: flex;
+justify-content: center;
+
+}
+.fildest{
+    width: 380px;
+   text-align: center;
+   margin-top: 50px;
+   background-color: skyblue;
+}
+.input{
+    width: 380px;
+    text-align: center;
+    margin-top: 10px; 
+    height: 30px;
+    margin-bottom: 10px;
+
+}
+.submit{
+    /* margin-left: 100px; */
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    padding: 8px 35px;
+    border-radius: 20px;
+}
+.newregster{
+   color: red; 
+}

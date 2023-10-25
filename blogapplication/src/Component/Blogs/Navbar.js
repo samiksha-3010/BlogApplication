@@ -7,7 +7,7 @@ const Navbar = () => {
 
 <div className='navigation'>
 <h4>SAVED BLOGS</h4>
-<h4>LIKED BLOGS</h4>
+<h4>ALL BLOGS</h4>
 <h4>ABOUT US</h4>               
  <h4>CONTACT US</h4>          
  <h4>SERVICE</h4>

@@ -5,50 +5,90 @@ import jwt from "jsonwebtoken"
 import BlogModal from "../Model/BlogModal.js";
 
 
+// export const Register = async (req, res) => {
+//     try {
+//     //   const { name, email, password, role } = req.body.UserData;
+//       const { name, email, password, number, role } = req.body.userData;
+  
+//       console.log(name, email, password, role);
+  
+//       if (!name || !email || !password || !role)
+//         return res.status(404).json({
+//           success: false,
+//           message: "all fields are mandatory",
+//         });
+  
+//       const isEmailExist = await UserModal.find({ email });
+  
+//       if (isEmailExist?.length) {
+//         return res.status(404).json({
+//           success: false,
+//           message: "Email already registered Please try another email",
+//         });
+//       }
+  
+//       const hashPass = await bcrypt.hash(password, 10);
+//       const userDetail = new UserModal({
+//         name,
+//         email,
+//         password: hashPass,
+//         role,
+//       });
+  
+//       await userDetail.save();
+  
+//       return res.status(200).json({
+//         success: true,
+//         message: "Registered Success",
+//         data: userDetail,
+//       });
+//     } catch (error) {
+//       return res.status(500).json({
+//         success: false,
+//         message: error.message,
+//       });
+//     }
+//   };
+
 export const Register = async (req, res) => {
-    try {
-    //   const { name, email, password, role } = req.body.UserData;
-      const { name, email, password, number, role } = req.body;
-  
-      console.log(name, email, password, role);
-  
-      if (!name || !email || !password || !role)
-        return res.status(404).json({
-          success: false,
-          message: "all fields are mandatory",
-        });
-  
-      const isEmailExist = await UserModal.find({ email });
-  
-      if (isEmailExist?.length) {
-        return res.status(404).json({
-          success: false,
-          message: "Email already registered Please try another email",
-        });
-      }
-  
-      const hashPass = await bcrypt.hash(password, 10);
-      const userDetail = new UserModal({
-        name,
-        email,
-        password: hashPass,
-        role,
-      });
-  
-      await userDetail.save();
-  
-      return res.status(200).json({
-        success: true,
-        message: "Registered Success",
-        data: userDetail,
-      });
-    } catch (error) {
-      return res.status(500).json({
+  try {
+    const { userData } = req.body;
+    const { name, email, password, role, number } = userData;
+    if (!name || !email || !password || !role || !number)
+      return res.json({
         success: false,
-        message: error.message,
+        message: "All Feilds are Mandatory!",
+      });
+
+    const isEmailExist = await UserModal.find({ email: email });
+    if (isEmailExist.length) {
+      return res.json({
+        success: false,
+        message: "Email already exists! Try a new one.",
       });
     }
-  };
+
+    const hashPassW = await bcrypt.hash(password, 10);
+
+    const user = new UserModal({
+      name,
+      email,
+      password: hashPassW,
+      role,
+      number,
+    });
+
+    await user.save();
+
+    return res.json({
+      success: true,
+      message: "User Registerd Successfully!",
+    });
+  } catch (error) {
+    return res.json({ success: "false", message: false });
+  }
+};
+
 
   export const Login = async (req, res) => {
     try {

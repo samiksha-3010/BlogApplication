@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { AuthContext } from '../../Context/AuthContext'
+// import { AuthContext } from '../../Context/AuthContext'
 import axios from 'axios'
 import toast from 'react-hot-toast'
+import "./Style/Register.css"
 
 const Register = () => {
     const [userData,setUserData] = useState({name:"",email:"",password:"",confirmPassword:""})
-    const router = useNavigate
+    const router = useNavigate();
     // const {state} = useContext(AuthContext)
 
     const handleChange = (event)=>{
@@ -42,17 +43,19 @@ const Register = () => {
   return (
     <div className='border'>
         <form onSubmit={handleSubmit}>
+            <fieldset className='fildest'>
             <h2>Register</h2>
             <label>Name</label><br/>
-            <input type='text'onChange={handleChange} name="name" value={userData.name}/><br/>
+            <input className='input' type='text'onChange={handleChange} name="name" value={userData.name}/><br/>
             <label>Email</label><br/>
-            <input type='email' onChange={handleChange} name="email" value={userData.email}/><br/>
+            <input className='input'  type='email' onChange={handleChange} name="email" value={userData.email}/><br/>
             <label>Password</label><br/>
-            <input type='password' onChange={handleChange} name="password" value={userData.password}/><br/>
+            <input className='input'  type='password' onChange={handleChange} name="password" value={userData.password}/><br/>
             <label>Confirm Password</label><br/>
-            <input type='Password' onChange={handleChange} name="confirmPassword" value={userData.confirmPassword}/><br/>
-         <input type='submit'/>
-          <p>Allready Have Acount Click Here?</p>
+            <input className='input'  type='Password' onChange={handleChange} name="confirmPassword" value={userData.confirmPassword}/><br/>
+         <input type='submit' className='submit'/>
+          <p  className='newregster'>Allready Have Acount Click Here?</p>
+          </fieldset>
         </form>
         
         </div>
