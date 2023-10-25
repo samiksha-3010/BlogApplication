@@ -1,10 +1,10 @@
 .homepageContainer {
-    width: 100%;
+  width: 100%;
     height: 100vh;
     position: fixed;
     left: 0;
     top: 0;
-    background-image: url("https://getwallpapers.com/wallpaper/full/0/f/1/891619-cool-wallpaper-of-study-1920x1080.jpg");
+    background-image: url("https://www.apemockups.com/wp-content/uploads/edd/2019/07/Organic-Food-Website-Template-768x576.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -30,6 +30,7 @@
     animation-direction: normal;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     letter-spacing: 2px;
+    color: black;
   }
   
   /* @keyframes welcome {

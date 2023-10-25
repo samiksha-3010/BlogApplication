@@ -22,6 +22,7 @@ const Login = () => {
                 localStorage.setItem("token",JSON.stringify(response.data.token))
                 setUserData({email:"",password:""})
                 router("/")
+
                 toast.success(response.data.message)
              }else{
                 toast.error(response.data.message)
@@ -44,7 +45,7 @@ const Login = () => {
             width: "380px",
             marginTop: "50px",
             textAlign: "centre",
-            backgroundColor: 'skyblue'
+            backgroundColor: '#9d6e41'
           }} >
             <label>Email</label><br/>
             <input style={{

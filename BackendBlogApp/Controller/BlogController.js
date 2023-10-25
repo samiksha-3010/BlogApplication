@@ -1,9 +1,5 @@
 import BlogModal from "../Model/BlogModal.js";
-
-
-
 // add blogs
-
 export const addBlog = async (req, res) => {
   try {
     const { title, image, categories, description} = req.body //.detail;

@@ -45,13 +45,13 @@ const Register = () => {
         <form onSubmit={handleSubmit}>
             <fieldset className='fildest'>
             <h2>Register</h2>
-            <label>Name</label><br/>
+            <label className='label'>Name</label><br/>
             <input className='input' type='text'onChange={handleChange} name="name" value={userData.name}/><br/>
-            <label>Email</label><br/>
+            <label className='label'>Email</label><br/>
             <input className='input'  type='email' onChange={handleChange} name="email" value={userData.email}/><br/>
-            <label>Password</label><br/>
+            <label className='label'>Password</label><br/>
             <input className='input'  type='password' onChange={handleChange} name="password" value={userData.password}/><br/>
-            <label>Confirm Password</label><br/>
+            <label className='label'>Confirm Password</label><br/>
             <input className='input'  type='Password' onChange={handleChange} name="confirmPassword" value={userData.confirmPassword}/><br/>
          <input type='submit' className='submit'/>
           <p  className='newregster'>Allready Have Acount Click Here?</p>

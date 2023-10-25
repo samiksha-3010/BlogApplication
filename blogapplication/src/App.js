@@ -7,6 +7,7 @@ import AllBlog from './Component/Blogs/AllBlog';
 import SingleBlog from './Component/Blogs/SingleBlog';
 import Register from './Component/Blogs/Register';
 import Login from './Component/Blogs/Login';
+import Error from './Component/Blogs/Error';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path='/Add-blog'element={<AddBlog/>}/>
         <Route exact path='/All-blog'element={<AllBlog/>}/>
         <Route exact path='/single-blog'element={<SingleBlog/>}/>
+        <Route exact path='/*'element={<Error/>}/>
 
         
       </Routes>
