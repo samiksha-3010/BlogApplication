@@ -2,7 +2,7 @@ import BlogModal from "../Model/BlogModal.js";
 // add blogs
 export const addBlog = async (req, res) => {
   try {
-    const { title, image, categories, description} = req.body //.detail;
+    const { title, image, categories, description} = req.body.detail;
     // console.log(title, image, description, categories);
 
     if (!title || !image || !description || !categories) {

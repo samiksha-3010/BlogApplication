@@ -12,7 +12,13 @@
     justify-content: space-around;
     /* margin-top: 40px; */
     background: grey;
+    position: fixed;
+    left: 0;
+    top: 0;
 
+}
+.navigation>h4:hover{
+  background-color: white;
 }
 
 

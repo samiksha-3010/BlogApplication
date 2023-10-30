@@ -39,10 +39,7 @@
 //   }else{
 //     toast.error("All Field are mandotry")
 //   }
-
- 
 //   }
-
 //   return (
 //     <div className='first-container-page'>
 //       <from  className="form-section" onSubmit={handleSubmit}>
@@ -50,7 +47,6 @@
 //         <input className='input-section'type='text' placeholder='ENTER TITILE YOUR BLOG' value={data.title}  onChange={handleChange} /><br/>
 //         <label>Blog Image</label><br/>
 //         <input className='input-section'type='text' placeholder='ENTER IMAGE YOUR BLOG ' value={data.image}  onChange={handleChange}/><br/>
-       
 //         <label>categories</label><br/>
 //         <input className='input-section'type='text' placeholder='ENTER TITILE YOUR BLOG CETEGORIES'value={data.categories}  onChange={handleChange}/><br/>
 //         <select onChange={handleChange}>
@@ -115,7 +111,7 @@ const AddBlog = () => {
             description: "",
             categories: "",
           });
-          route("/");
+          route("/all-blog");
         } else {
           toast.error(response.data.message);
         }

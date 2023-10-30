@@ -74,7 +74,7 @@ const Login = () => {
               borderRadius: "20px",
             }}/>
             <br/>
-           <u style={{marginLeft:"18%",marginTop:"10%", color:"red"}}>New user? Register</u>
+           <u style={{marginLeft:"18%",marginTop:"10%", color:"red"}} onClick={() => router('/register')}>New user? Register</u>
            </fieldset>
         </form>
     </div>

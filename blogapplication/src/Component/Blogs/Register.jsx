@@ -54,7 +54,7 @@ const Register = () => {
             <label className='label'>Confirm Password</label><br/>
             <input className='input'  type='Password' onChange={handleChange} name="confirmPassword" value={userData.confirmPassword}/><br/>
          <input type='submit' className='submit'/>
-          <p  className='newregster'>Allready Have Acount Click Here?</p>
+          <p  onClick={() => router('/login')} className='newregster'>Allready Have Acount Click Here?</p>
           </fieldset>
         </form>
         
