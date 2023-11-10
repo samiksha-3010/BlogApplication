@@ -19,7 +19,7 @@ function App() {
         <Route exact path='/register'element={<Register/>}/>
         <Route exact path='/Add-blog'element={<AddBlog/>}/>
         <Route exact path='/All-blog'element={<AllBlog/>}/>
-        <Route exact path='/singl-eblog'element={<SingleBlog/>}/>
+        <Route exact path='/singl-eblog/:id'element={<SingleBlog/>}/>
         {/* <Route exact path='/*'element={<Error/>}/> */}
 
         

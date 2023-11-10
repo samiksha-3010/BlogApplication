@@ -24,9 +24,9 @@ const blogSchema = new Schema({
         default: new Date(),
         required:true
     },
-    // comments:{
-    //     type:[object]
-    // },
+    comments:{
+        type:["object"]
+    },
     likes:{
         type:[String],
     }

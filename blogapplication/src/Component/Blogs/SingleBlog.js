@@ -3,7 +3,7 @@
 // import { useNavigate, useParams } from "react-router-dom";
 // import toast from "react-hot-toast";
 // import axios from "axios";
-// // import { AuthContext } from "../../Context/AuthContext";
+// import { AuthContext } from "../../Context/AuthContext";
 
 
 // const SingleBlog = () => {
@@ -12,7 +12,7 @@
 //   const [editModal, setEditModal] = useState(false);
 //   const { id } = useParams();
 //   const [comment, setComment] = useState("");
-//   //  const { state } = useContext(AuthContext);
+//    const { state } = useContext(AuthContext);
 //   const route = useNavigate();
 
 //   console.log(id, "params");
@@ -22,7 +22,7 @@
 //   useEffect(() => {
 //     async function getSingleBlog() {
 //       try {
-//         const  response = await axios.post("http://localhost:8000/single-blog",{id}) 
+//         const  response = await axios.post("http://localhost:8000/singl-eblog",{id}) 
 
 //         // const response = await api.post("/singleblog", { id });
 
@@ -267,20 +267,16 @@ const SingleBlog = () => {
   const [singleBlogData, setSingleBlogData] = useState({});
   const { id } = useParams();
   const route = useNavigate()
-  
    console.log(singleBlogData)
-
   // const { state } = useContext(AuthContext)
-
-
   useEffect(() => {
       if (id) {
           async function getSingleBlogData() {
               try {
-                const  response = await axios.post("http://localhost:8000/singl-eblog",{id}) 
+                const  response = await axios.post("http://localhost:8000/singl-eblog",{Blog:id}) 
                   // const response = await api.post('/buyer/get-single-product-data', { productId: id })
                   if (response.data.success) {
-                      setSingleBlogData(response.data.product)
+                      setSingleBlogData(response.data.Blog)
                   }else{
                     toast.error(response.data.message)
                   }
