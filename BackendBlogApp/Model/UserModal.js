@@ -12,10 +12,10 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
-    // number:{
-    //     type: Number,
-    //     required: true
-    // },
+    number:{
+        type: Number,
+        required: true
+    },
   
     role:{
         type: String,

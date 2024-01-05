@@ -5,7 +5,7 @@ import cors from 'cors'
 import morgan from "morgan"
 import { Login, Register, getCurrentUser, like,  } from "./Controller/UserController.js"
 import { addBlog, allBlogs, deliteBlog, editBlog, singleBlog, updateBlog } from "./Controller/BlogController.js";
-import { addComment } from "./Controller/AddCommentControoler.js";
+// import { addComment } from "./Controller/AddCommentControoler.js";
 
 
 const app = express();
@@ -21,7 +21,7 @@ app.get("/",(req,res) => {
 
 app.post("/register",Register)
 app.post("/login",Login)
-app.get("/get-currentUser",getCurrentUser)
+app.get("/get-current-User",getCurrentUser)
 app.post("/like",like)
 
 
@@ -32,7 +32,7 @@ app.post("/edit-blog", editBlog);
 app.post("/update-blog", updateBlog);
 app.post("/delete-blog",  deliteBlog);
 
-app.post("/add-comment",  addComment);
+// app.post("/add-comment",  addComment);
 // add, all, single,delite,edit,
 
 
