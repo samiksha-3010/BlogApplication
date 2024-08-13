@@ -7,7 +7,7 @@ import AllBlog from './Component/Blogs/AllBlog';
 import SingleBlog from './Component/Blogs/SingleBlog';
 import Register from './Component/Blogs/Register';
 import Login from './Component/Blogs/Login';
-import Error from './Component/Blogs/Error';
+import Error from './Component/Blogs/Socal';
 import Profile from './Component/Blogs/Profile';
 
 function App() {
