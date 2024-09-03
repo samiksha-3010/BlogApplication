@@ -7,7 +7,7 @@ const Home = () => {
     <div className="homepageContainer">
    <Navbar/>
     <div className="mainHomecontainer">
-      {/* <h1 style={{color:"black"}}>WELCOME TO MY NEW BLOG</h1> */}
+      <h1 style={{color:"black"}}>WELCOME TO MY NEW BLOG</h1>
     </div>
   </div>
   )

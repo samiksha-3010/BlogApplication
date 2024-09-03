@@ -9,6 +9,7 @@ import Register from './Component/Blogs/Register';
 import Login from './Component/Blogs/Login';
 import Error from './Component/Blogs/Socal';
 import Profile from './Component/Blogs/Profile';
+import Socal from './Component/Blogs/Socal';
 
 function App() {
   return (
@@ -20,7 +21,9 @@ function App() {
         <Route exact path='/register'element={<Register/>}/>
         <Route exact path='/Add-blog'element={<AddBlog/>}/>
         <Route exact path='/All-blog'element={<AllBlog/>}/>
-        <Route exact path='/All-blog'element={<Profile/>}/>
+        <Route exact path='/profile'element={<Profile/>}/>
+        <Route exact path='/socal'element={<Socal/>}/>
+
 
         <Route exact path='/singl-eblog/:id'element={<SingleBlog/>}/>
         {/* <Route exact path='/*'element={<Error/>}/> */}
