@@ -2,6 +2,8 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
+import "./Style/Register.css"
+
 
 
 
@@ -74,7 +76,7 @@ const Login = () => {
               borderRadius: "20px",
             }}/>
             <br/>
-           <u style={{marginLeft:"18%",marginTop:"10%", color:"red"}} onClick={() => router('/register')}>New user? Register</u>
+           <u style={{marginLeft:"18%",marginTop:"10%", color:"red",cursor:"pointer"}} onClick={() => router('/register')}>New user? Register</u>
            </fieldset>
         </form>
     </div>

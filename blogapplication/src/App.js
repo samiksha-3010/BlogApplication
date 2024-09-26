@@ -26,7 +26,7 @@ function App() {
 
 
         <Route exact path='/singl-eblog/:id'element={<SingleBlog/>}/>
-        {/* <Route exact path='/*'element={<Error/>}/> */}
+        <Route exact path='/*'element={<Error/>}/>
 
         
       </Routes>
