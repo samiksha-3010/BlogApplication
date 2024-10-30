@@ -9,7 +9,7 @@ import BlogModal from "../Model/BlogModal.js";
 
 export const Register = async (req, res) => {
   try {
-    const { userData } = req.body;
+    const { userData } = req.body.userData;
     const { name, email, password, role, number } = userData;
     if (!name || !email || !password || !role || !number)
       return res.json({

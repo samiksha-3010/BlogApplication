@@ -3,8 +3,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import toast from "react-hot-toast";
 import axios from "axios";
-import { AuthContext } from "../../Context/AuthContext";
 import  "./Style/SingleBlog.css"
+import { MyContext } from "../../Context/AuthContext";
 
 
 
@@ -14,7 +14,7 @@ const SingleBlog = () => {
   const [editModal, setEditModal] = useState(false);
   const { id } = useParams();
   const [comment, setComment] = useState("");
-   const { state } = useContext(AuthContext);
+   const { state } = useContext(MyContext);
   const route = useNavigate();
 
   console.log(id, "params");

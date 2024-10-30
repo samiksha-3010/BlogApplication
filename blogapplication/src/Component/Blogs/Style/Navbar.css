@@ -2,16 +2,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* background-color: rgba(0, 0, 0, 0.9); */
-}
+  }
 .navigation{
     width: 100%;
     border: 1px solid black;
     height: 70px;
     display: flex;
     justify-content: space-around;
-    /* margin-top: 40px; */
-    background: grey;
     position: fixed;
     left: 0;
     top: 0;

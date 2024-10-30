@@ -10,6 +10,7 @@ border: 1px solid black;
 align-items: center;
 display: flex;
 justify-content: center;
+height: 650px;
 background-image: url("https://cdn.pixabay.com/photo/2016/06/09/08/49/blog-1445367_960_720.jpg");
 
 
@@ -32,7 +33,6 @@ background-image: url("https://cdn.pixabay.com/photo/2016/06/09/08/49/blog-14453
 
 }
 .submit{
-    margin-left: 100px;
     margin-top: 15px;
     background-color: black;
     color: white;
@@ -43,7 +43,7 @@ background-image: url("https://cdn.pixabay.com/photo/2016/06/09/08/49/blog-14453
     text-align: center;
 }
 .newregster{
-   color:black; 
+   color:red; 
 }
 .label{
     font-size: 20px;
